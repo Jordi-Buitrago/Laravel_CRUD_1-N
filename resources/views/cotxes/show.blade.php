@@ -17,16 +17,12 @@
                         <td>{{$dada->marca}}</td>
                     </tr>
                     <tr>
-                        <td>Model</td>
-                        <td>{{$dada->model}}</td>
-                    </tr>
-                    <tr>
                         <td>Any</td>
                         <td>{{$dada->any}}</td>
                     </tr>
                     <tr>
                         <td>Preu</td>
-                        <td>{{$dada->preu}}</td>
+                        <td>{{$dada->preu}} $</td>
                     </tr>
                 </tbody>
             </table>

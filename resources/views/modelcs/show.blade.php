@@ -18,11 +18,11 @@
                     </tr>
                     <tr>
                         <td>Potencia</td>
-                        <td>{{$dada->potencia}}</td>
+                        <td>{{$dada->potencia}} CV</td>
                     </tr>
                     <tr>
                         <td>Consum</td>
-                        <td>{{$dada->consum}}</td>
+                        <td>{{$dada->consum}} l/100km</td>
                     </tr>
                     <tr>
                         <td>Cotxe</td>

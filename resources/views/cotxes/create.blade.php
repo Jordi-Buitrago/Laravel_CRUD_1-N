@@ -19,14 +19,6 @@
                 <input type="text" class="form-control" name="marca"/>
             </div>
             <div class="form-group">    
-                <label for="model">Model:</label>
-                <input type="text" class="form-control" name="model"/>
-            </div>
-            <div class="form-group">    
-                <label for="matricula">Matricula:</label>
-                <input type="text" class="form-control" name="matricula"/>
-            </div>
-            <div class="form-group">    
                 <label for="color">Color:</label>
                 <input type="text" class="form-control" name="color"/>
             </div>

@@ -20,8 +20,8 @@
                     <tr>
                         <td>{{ $dada->nom }}</td>
                         <td>{{ $dada->places }}</td>
-                        <td>{{ $dada->potencia }}</td>
-                        <td>{{ $dada->consum }}</td>
+                        <td>{{ $dada->potencia }} CV</td>
+                        <td>{{ $dada->consum }} l/100km</td>
                         <td>{{ $dada->cotxe_id }}</td>
                         <td>
                             <a href="{{ route('modelcs.show', $dada->id) }}" class="btn btn-primary">Show</a>

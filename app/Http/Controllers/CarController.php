@@ -39,8 +39,6 @@ class CarController extends Controller
         $dada = new Cotxe();
         $dada->id = $request->id;
         $dada->marca = $request->marca;
-        $dada->model = $request->model;
-        $dada->matricula = $request->matricula;
         $dada->color = $request->color;
         $dada->any = $request->any;
         $dada->preu = $request->preu;
@@ -83,8 +81,6 @@ class CarController extends Controller
     {
         $dada = Cotxe::find($id);
         $dada->marca = $request->marca;
-        $dada->model = $request->model;
-        $dada->matricula = $request->matricula;
         $dada->color = $request->color;
         $dada->any = $request->any;
         $dada->preu = $request->preu;

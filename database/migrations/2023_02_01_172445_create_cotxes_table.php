@@ -16,8 +16,6 @@ class CreateCotxesTable extends Migration
         Schema::create('cotxes', function (Blueprint $table) {
             $table->id();
             $table->string('marca');
-            $table->string('model');
-            $table->string('matricula');
             $table->string('color');
             $table->string('any');
             $table->string('preu');

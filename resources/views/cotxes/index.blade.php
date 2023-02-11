@@ -8,22 +8,21 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Marca</th>
-                        <th>Model</th>
                         <th>Color</th>
                         <th>Any</th>
                         <th>Preu</th>
-                        <th>Descripcio</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($dades as $dada)
                     <tr>
+                        <td>{{ $dada->id }}</td>
                         <td>{{ $dada->marca }}</td>
-                        <td>{{ $dada->model }}</td>
                         <td>{{ $dada->color }}</td>
                         <td>{{ $dada->any }}</td>
-                        <td>{{ $dada->preu }}</td>
+                        <td>{{ $dada->preu }} $</td>
                         <td>
                             <a href="{{ route('cotxes.show', $dada->id) }}" class="btn btn-primary">Show</a>
                             <a href="{{ route('cotxes.edit', $dada->id) }}" class="btn btn-warning">Edit</a>

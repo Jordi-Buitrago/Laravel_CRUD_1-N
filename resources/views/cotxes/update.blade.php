@@ -14,10 +14,6 @@
                 <input type="text" class="form-control" name="marca" value={{ $dada->marca }} />
             </div>
             <div class="form-group">
-                <label for="model">Model:</label>
-                <input type="text" class="form-control" name="model" value={{ $dada->model }} />
-            </div>
-            <div class="form-group">
                 <label for="any">Any:</label>
                 <input type="text" class="form-control" name="any" value={{ $dada->any }} />
             </div>

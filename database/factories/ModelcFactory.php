@@ -19,11 +19,11 @@ class ModelcFactory extends Factory
     public function definition()
     {
         return [
-            'nom' => $this->faker->name,
+            'nom' => $this->faker->city,
             'marca' => $this->faker->name,
-            'places' => $this->faker->name,
-            'potencia' => $this->faker->name,
-            'consum' => $this->faker->name,
+            'places' => $this->faker->numberBetween(1, 5),
+            'potencia' => $this->faker->numberBetween(80, 500),
+            'consum' => $this->faker->numberBetween(5, 20),
             'cotxe_id' => Cotxe::all()->random()->id,
         ];
     }

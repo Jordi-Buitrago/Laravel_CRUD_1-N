@@ -15,8 +15,6 @@ class CotxeFactory extends Factory
     {
         return [
             'marca' => $this->faker->company,
-            'model' => $this->faker->name,
-            'matricula' => $this->faker->randomNumber(5, true),
             'color' => $this->faker->colorName,
             'any' => $this->faker->year,
             'preu' => $this->faker->numberBetween(10000, 1000000),

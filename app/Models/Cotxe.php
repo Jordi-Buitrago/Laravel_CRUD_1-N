@@ -14,8 +14,6 @@ class Cotxe extends Model
 
     protected $fillable = [
         'marca',
-        'model',
-        'matricula',
         'color',
         'any',
         'preu',
