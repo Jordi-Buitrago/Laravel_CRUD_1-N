@@ -10,7 +10,7 @@ class ModelcController extends Controller
     public function index()
     {
         $dades = Modelc::all();
-        return view('modelcs.index', compact('dades'));
+        return view('modelcs.index', ['dades' => $dades]);
     }
 
     public function create()
@@ -22,36 +22,44 @@ class ModelcController extends Controller
     {
         $dada = new Modelc();
         $dada->nom = $request->nom;
-        $dada->codi = $request->codi;
+        $dada->marca = $request->marca;
+        $dada->places = $request->places;
+        $dada->potencia = $request->potencia;
+        $dada->consum = $request->consum;
+        $dada->cotxe_id = $request->cotxe_id;
         $dada->save();
         return redirect()->route('modelcs.index');
     }
 
-    public function show(Modelc $dada)
+    public function show($nom)
     {
-        return view('modelcs.show', compact('dada'));
+        $dada = Modelc::find($nom);
+        return view('modelcs.show', ['dada' => $dada]);
     }
 
-    public function edit(Modelc $dada)
+
+    public function edit($nom)
     {
-        return view('modelcs.edit', compact('dada'));
+        $dada = Modelc::find($nom);
+        return view('modelcs.edit', ['dada' => $dada]);
     }
 
-    public function update(Request $request, Modelc $dada)
+    public function update(Request $request, $nom)
     {
-        $this->validate($request, [
-            'nom' => 'required',
-            'codi' => 'required',
-        ]);
-
+        $dada = Modelc::find($nom);
         $dada->nom = $request->nom;
-        $dada->codi = $request->codi;
+        $dada->marca = $request->marca;
+        $dada->places = $request->places;
+        $dada->potencia = $request->potencia;
+        $dada->consum = $request->consum;
+        $dada->cotxe_id = $request->cotxe_id;
         $dada->save();
         return redirect()->route('modelcs.index');
     }
 
-    public function destroy(Modelc $dada)
+    public function destroy($nom)
     {
+        $dada = Modelc::find($nom);
         $dada->delete();
         return redirect()->route('modelcs.index');
     }   

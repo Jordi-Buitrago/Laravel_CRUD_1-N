@@ -83,6 +83,11 @@ class CarController extends Controller
     {
         $dada = Cotxe::find($id);
         $dada->marca = $request->marca;
+        $dada->model = $request->model;
+        $dada->matricula = $request->matricula;
+        $dada->color = $request->color;
+        $dada->any = $request->any;
+        $dada->preu = $request->preu;
         $dada->save();
         return redirect()->route('cotxes.index');
     }

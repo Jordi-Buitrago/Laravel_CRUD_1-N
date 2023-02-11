@@ -28,7 +28,7 @@ Route::get('/dashboard', function () {
     return App\Models\Cotxe::find($id);
 }); */
 Route::resource('cotxes', CarController::class);
-Route::resource('models', ModelcController::class);
+Route::resource('modelcs', ModelcController::class);
 
 Route::middleware(['auth'])->group(function () {
     Route::delete('cotxes/{id}', [CarController::class, 'destroy']);
