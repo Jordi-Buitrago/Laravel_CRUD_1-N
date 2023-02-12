@@ -16,7 +16,6 @@ class CreateModelcsTable extends Migration
         Schema::create('modelcs', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->string('marca');
             $table->string('places');
             $table->string('potencia');
             $table->string('consum');

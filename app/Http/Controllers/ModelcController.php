@@ -22,7 +22,6 @@ class ModelcController extends Controller
     {
         $dada = new Modelc();
         $dada->nom = $request->nom;
-        $dada->marca = $request->marca;
         $dada->places = $request->places;
         $dada->potencia = $request->potencia;
         $dada->consum = $request->consum;
@@ -48,7 +47,6 @@ class ModelcController extends Controller
     {
         $dada = Modelc::find($nom);
         $dada->nom = $request->nom;
-        $dada->marca = $request->marca;
         $dada->places = $request->places;
         $dada->potencia = $request->potencia;
         $dada->consum = $request->consum;

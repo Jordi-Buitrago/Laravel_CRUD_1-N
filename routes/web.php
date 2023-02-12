@@ -5,12 +5,12 @@ use App\Http\Controllers\CarController;
 use App\Http\Controllers\ModelcController;
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| cotxes Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
+| Here is where you can register cotxes routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| contains the "cotxes" middleware group. Now create something great!
 |
 */
 
@@ -30,14 +30,23 @@ Route::get('/dashboard', function () {
 Route::resource('cotxes', CarController::class);
 Route::resource('modelcs', ModelcController::class);
 
-Route::middleware(['auth'])->group(function () {
-    Route::delete('cotxes/{id}', [CarController::class, 'destroy']);
-    Route::get('cotxes/{id}/edit', [CarController::class, 'edit']);
-    Route::put('cotxes/{id}', [CarController::class, 'update']);
-    Route::delete('models/{id}', [ModelcController::class, 'destroy']);
-    Route::get('models/{id}/edit', [ModelcController::class, 'edit']);
-    Route::put('models/{id}', [ModelcController::class, 'update']);
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/modelcs/create', [ModelcController::class, 'create'])->name('modelcs.create');
+    Route::post('/modelcs', [ModelcController::class, 'store'])->name('modelcs.store');
+    Route::get('/modelcs/{modelc}/edit', [ModelcController::class, 'edit'])->name('modelcs.edit');
+    Route::put('/modelcs/{modelc}', [ModelcController::class, 'update'])->name('modelcs.update');
+    Route::delete('/modelcs/{modelc}', [ModelcController::class, 'destroy'])->name('modelcs.destroy'); 
+
+    //En cotxes solo funciona el create, no el resto
+    Route::get('/cotxes/create', [CarController::class, 'create'])->name('cotxes.create');
+    Route::post('/cotxes', [CarController::class, 'store'])->name('cotxes.store');
+    Route::get('/cotxes/{cotxe}/edit', [CarController::class, 'edit'])->name('cotxes.edit');
+    Route::put('/cotxes/{cotxe}', [CarController::class, 'update'])->name('cotxes.update');
+    Route::delete('/cotxes/{cotxe}', [CarController::class, 'destroy'])->name('cotxes.destroy');
 });
+
+
+
 require __DIR__.'/auth.php';
 
 

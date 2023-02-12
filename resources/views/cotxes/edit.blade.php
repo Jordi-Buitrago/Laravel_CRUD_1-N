@@ -8,7 +8,7 @@
         </div>  
 
         <form method="post" action="{{ route('cotxes.update', $dada->id) }}">
-            @method('PUT') 
+            @method('PATCH') 
             @csrf
             <div class="form-group">    
                 <label for="marca">Marca:</label>

@@ -11,7 +11,6 @@ class Modelc extends Model
 
     protected $fillable = [
         'nom',
-        'marca',
         'places',
         'potencia',
         'consum',

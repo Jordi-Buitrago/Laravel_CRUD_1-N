@@ -20,7 +20,6 @@ class ModelcFactory extends Factory
     {
         return [
             'nom' => $this->faker->city,
-            'marca' => $this->faker->name,
             'places' => $this->faker->numberBetween(1, 5),
             'potencia' => $this->faker->numberBetween(80, 500),
             'consum' => $this->faker->numberBetween(5, 20),
