@@ -40,9 +40,9 @@ Route::group(['middleware' => ['auth']], function () {
     //En cotxes solo funciona el create, no el resto
     Route::get('/cotxes/create', [CarController::class, 'create'])->name('cotxes.create');
     Route::post('/cotxes', [CarController::class, 'store'])->name('cotxes.store');
-    Route::get('/cotxes/{cotxe}/edit', [CarController::class, 'edit'])->name('cotxes.edit');
-    Route::put('/cotxes/{cotxe}', [CarController::class, 'update'])->name('cotxes.update');
-    Route::delete('/cotxes/{cotxe}', [CarController::class, 'destroy'])->name('cotxes.destroy');
+    Route::get('/cotxes/{cotx}/edit', [CarController::class, 'edit'])->name('cotxes.edit');
+    Route::put('/cotxes/{cotx}', [CarController::class, 'update'])->name('cotxes.update');
+    Route::delete('/cotxes/{cotx}', [CarController::class, 'destroy'])->name('cotxes.destroy');
 });
 
 
